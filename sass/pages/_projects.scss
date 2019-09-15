@@ -73,5 +73,9 @@
     }
     .desc-2{
         margin-bottom: 7rem;
+        @include respond(phone){
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 }
