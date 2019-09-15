@@ -10,7 +10,7 @@ export default class project extends Component {
     render() {
         return (
             <React.Fragment>
-            <HeaderLayout/>
+            <HeaderLayout color="#f9eedc"/>
             <main>
                 <div className="section_first-project">
                     <Container>

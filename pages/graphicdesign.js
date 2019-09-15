@@ -10,7 +10,7 @@ export default class graphicdesign extends Component {
     render() {
         return (
             <React.Fragment>
-            <HeaderLayout height="100vh">
+            <HeaderLayout height="100vh" color="#f2f2f2">
                     <section className="section_header-arc">
                         <div className="centerThis">
                             <Container>
