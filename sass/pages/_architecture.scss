@@ -1,0 +1,34 @@
+main{
+    .section_first-arc{
+        height: 100vh;
+        padding: 3rem 0;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img-box{
+            padding: 0 2rem;
+        }
+        p{
+            font-family: 'Sanchez', serif;
+            font-size: 1.2rem;
+        }
+        h2{
+            font-family: "Akzidenz-Grotesk-BQ-Bold";
+            font-size: 2.5rem;
+        }
+        img{
+            margin: 8rem 0;
+        }
+        ul{
+            list-style: none;
+           li{
+                display: inline-block;
+           }
+        }
+        .bd-bt{
+            text-decoration: underline;
+            font-family: "Akzidenz-Grotesk-BQ-Regular";
+        }
+    }
+}

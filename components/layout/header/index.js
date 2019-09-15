@@ -7,12 +7,12 @@ const index = () => {
         <header>
             <Container fluid>
                 <Row>
-                    <Col md={5} className="logo-side"><h1>Ag-Na-Te</h1></Col>
-                    <Col md={7} className="right-side">
+                    <Col xs={5} md={5} className="logo-side"><Link><a>Ag-Na-Te</a></Link></Col>
+                    <Col xs={7} md={7} className="right-side">
                         <ul style={{listStyle:'none'}}>
                             <li><Link><a>About</a></Link></li>
-                            <li><Link><a>Graphic Design</a></Link></li>
-                            <li><Link><a>Architecture</a></Link></li>
+                            <li><Link href="/graphicdesign"><a>Graphic Design</a></Link></li>
+                            <li><Link href="/architecture"><a>Architecture</a></Link></li>
                             <li><Link><a>Construction</a></Link></li>
                             <li><Link><a>Contact</a></Link></li>
                         </ul>

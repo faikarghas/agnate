@@ -1,5 +1,13 @@
 main{
-    .section_first{
-        
+    .section_first-home{
+        height: 100vh;
+        background-color: #231f20;
+        position: relative;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
     }
 }
