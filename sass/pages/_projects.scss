@@ -2,7 +2,7 @@
     padding: 10rem 0;
     background-color: #f9eedc;
     @include respond(phone){
-        padding: 10rem 0 2rem 0;
+        padding: 10rem 2rem 2rem;
     }
     .ai-ends{
         display: flex;
@@ -55,6 +55,9 @@
 .section_third-project{
     padding: 10rem 0 2rem 0;
     background-color: #f9eedc;
+    @include respond(phone){
+        padding: 10rem 2rem;
+    }
     .nav-project{
         font-family: 'Sanchez', serif;
         text-align: center;
