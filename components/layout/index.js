@@ -4,8 +4,7 @@ import Header from './header'
 const index = (props) => {
     return (
         <React.Fragment>
-            <Header/>
-            {props.children}
+            <Header children={props.children} height={props.height} color={props.color}/>
         </React.Fragment>
     )
 }

@@ -1,11 +1,14 @@
-main{
-    .section_first-home{
-        height: 100vh;
+.section_header-home{
         background-color: #231f20;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 2rem 0;
+        height: 83%;
+        @include respond(phone){
+            height: 90%;
+        }
         p{
             color: white;
             font-size: 1.2rem;
@@ -13,12 +16,26 @@ main{
         }
         .left-title{
             position: relative;
+            @include respond(phone){
+                margin-bottom: 8rem;
+            }
             h2{
                 position: absolute;
                 bottom: -37px;
                 color: white;
                 font-size: 2.8rem;
                 font-family: "Akzidenz-Grotesk-BQ-Bold";
+            }
+        }
+        .mid-img img{
+            height: 40rem;
+            object-fit: contain;
+        }
+        .right-desc{
+            @include respond(phone){
+                margin-top: 7rem;
+                display: flex;
+                justify-content: flex-end;
             }
         }
         .border-center{
@@ -41,6 +58,51 @@ main{
                 height: 2px;
                 background-color: white;
             }
+        }
+}
+
+.section_first-home{
+    background-color: #303030;
+    padding: 40px 25px;
+    .toDetail{
+        display: block;
+        .box-img{
+            padding: 2rem;
+            background-color: #231f20;
+            p{
+                color: white;
+                font-size: 1.4rem;
+                font-family: 'Sanchez', serif;
+            }
+            .title{
+                margin-top: 2rem;
+            }
+            .subTitle{
+                color: #ddd;
+            }
+            img{
+                height: 40rem;
+                object-fit: cover;
+            }
+        }
+    }
+    .box-img{
+        padding: 2rem;
+        background-color: #231f20;
+        p{
+            color: white;
+            font-size: 1.4rem;
+            font-family: 'Sanchez', serif;
+        }
+        .title{
+            margin-top: 2rem;
+        }
+        .subTitle{
+            color: #ddd;
+        }
+        img{
+            height: 40rem;
+            object-fit: cover;
         }
     }
 }
