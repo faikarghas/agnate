@@ -4,7 +4,7 @@ header{
         background-color: #231f20;
         height: 17%;
         @include respond(phone){
-            height: 10%;
+            height: 12%;
         }
         .menu-mobile{
             display: none;
@@ -82,12 +82,13 @@ header{
             a{
                 font-size: 6rem;
                 color: white !important;
+                font-family: "Akzidenz-Grotesk-BQ-Bold";
             }
         }
     }
 }
 
-.visible{
+.visiblee{
     opacity: 1;
     z-index: 2;
 }

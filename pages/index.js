@@ -6,16 +6,17 @@ import { Tween, Timeline } from 'react-gsap';
 
 import '../sass/main.scss'
 
-{/* <Link href="/project/[slug]" as="/project/elchino"> */}
 
 const index = () => {
     return (
         <React.Fragment>
             <HeaderLayout height="100vh" color="#231f20">
+                <Link href="/project/[slug]" as="/project/elchino">
+                <a style={{display:'block'}}>
                 <section className="section_header-home">
                     <Container fluid>
                         <Row>
-                            <Col xs={4} className="left-title">
+                            <Col xs={12} md={4} className="left-title">
                                 <Timeline
                                     target={
                                         <h2>
@@ -73,6 +74,8 @@ const index = () => {
                         </Row>
                     </div>
                 </section>
+                </a>
+                </Link>
             </HeaderLayout>
             <main>
                 <section className="section_first-home">

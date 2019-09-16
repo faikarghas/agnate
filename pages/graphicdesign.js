@@ -21,11 +21,11 @@ export default class graphicdesign extends Component {
                                                 <img src="../static/images/grap.png" alt="flowimg" width="100%"/>
                                             </div>
                                             <Row>
-                                                <Col xs={3}>
+                                                <Col xs={4} md={3}>
                                                     <h2>Graphic Design <br/> .</h2>
                                                 </Col>
-                                                <Col xs={9}>
-                                                    <p className="bd-bt">As Undergraduates the Founders of AgNaTe started as freelance designers in their own companies and focused in their own areas of <br/> practice. As they graduated they learned from a short term experience about the growth of the <br/>4 creative industry and how it a ected the social phenomenon that we see and feel today.</p>
+                                                <Col xs={8} md={9}>
+                                                    <p className="bd-bt">As Undergraduates the Founders of AgNaTe started as freelance designers in their own companies and focused in their own areas of practice. As they graduated they learned from a short term experience about the growth of the 4 creative industry and how it a ected the social phenomenon that we see and feel today.</p>
                                                 </Col>
                                             </Row>
                                     </Col>

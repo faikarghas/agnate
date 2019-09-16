@@ -8,7 +8,7 @@ const index = (props) => {
     let show = ''
 
     if(open === true){
-         show = 'visible'
+         show = 'visiblee'
     } else {
          show = ''
     }
