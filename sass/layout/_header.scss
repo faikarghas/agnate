@@ -65,15 +65,15 @@ header{
     height: 100%;
     position: fixed;
     top: 0;
-    z-index: -1;
+    z-index: 1;
     background-color: black;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     opacity: 0;
-    visibility: visible;
-    transition: opacity .4s;
+    visibility: hidden;
+    transition: visibility 0s .4s,opacity .4s;
     ul{
         margin: 18rem 0 0 0;
         text-align: center;
@@ -89,8 +89,9 @@ header{
 }
 
 .visiblee{
+    transition: opacity .4s;
     opacity: 1;
-    z-index: 2;
+    visibility: visible;
 }
 
 #nav-icon3 span:nth-child(1) {
