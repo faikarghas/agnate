@@ -4,7 +4,7 @@ header{
         background-color: #231f20;
         height: 17%;
         @include respond(phone){
-            height: 12%;
+            height: 10vh;
         }
         .menu-mobile{
             display: none;

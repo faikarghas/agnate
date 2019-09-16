@@ -7,7 +7,7 @@
         padding: 2rem 0;
         height: 83%;
         @include respond(phone){
-            height: 88%;
+            height: 90vh;
             padding: 0 2rem;
         }
         p{
@@ -20,7 +20,7 @@
             display: flex;
             justify-content: flex-end;
             @include respond(phone){
-                margin: 8rem 0 1rem;
+                margin: 8rem 0 6rem;
                 justify-content: flex-start;
             }
             h2{
