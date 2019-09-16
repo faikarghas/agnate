@@ -17,6 +17,8 @@
         }
         .left-title{
             position: relative;
+            display: flex;
+            justify-content: flex-end;
             @include respond(phone){
                 margin-bottom: 8rem;
             }
@@ -31,6 +33,9 @@
         .mid-img img{
             height: 40rem;
             object-fit: contain;
+            @include respond(big-desktop){
+                height: 50rem;
+            }
         }
         .right-desc{
             @include respond(phone){

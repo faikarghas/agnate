@@ -59,6 +59,9 @@
         img{
             height: 50rem;
             object-fit: cover;
+            @include respond(phone){
+                height: 40rem;
+            }
         }
     }
 }
