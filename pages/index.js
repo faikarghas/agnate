@@ -10,7 +10,12 @@ import '../sass/main.scss'
 class Index  extends React.Component {
 
     state = {
-        trans : 0
+        trans : 0,
+        play1 : 'stop',
+        play2 : 'stop',
+        play3 : 'stop',
+        play4 : 'stop',
+        play5 : 'stop'
     }
 
     componentDidMount(){
@@ -23,16 +28,39 @@ class Index  extends React.Component {
 
     handleScroll = ()=> {
         let valueScroll = window.scrollY
+        let valueScroll2 = Math.ceil(window.scrollY*10)
+
         if(valueScroll){
             this.setState({
                 trans : valueScroll / 7,
             })
         }
+
+        if(valueScroll2 >= 3000 && valueScroll2 <= 8000){
+            this.setState({
+                play1 : 'play',
+            })
+        } else if (valueScroll2 >= 8000 && valueScroll2 <= 13000){
+            this.setState({
+                play2 : 'play',
+            })
+        } else if (valueScroll2 >= 14000 && valueScroll2 <= 19000){
+            this.setState({
+                play3 : 'play',
+            })
+        } else if (valueScroll2 >= 24000 && valueScroll2 <= 29000){
+            this.setState({
+                play4 : 'play',
+            })
+        } else if (valueScroll2 >= 30000 && valueScroll2 <= 39000){
+            this.setState({
+                play5 : 'play',
+            })
+        }
     }
 
     render(){
-        console.log(this.state.trans);
-        const {trans} = this.state
+        const {trans,play1,play2,play3,play4,play5} = this.state
         return (
             <React.Fragment>
                 <HeaderLayout height="100vh" color="#231f20">
@@ -95,7 +123,7 @@ class Index  extends React.Component {
                                         <Tween from={{css:{width:'0'}}} to={{css:{width:'100%'}}} delay={.7} />
                                     </Timeline>
                                 </Col>
-                                <Col xs={2} md={1} className="centerThis"><p>Indonesia</p></Col>
+                                <Col xs={2} md={1} className="centerThis"><p >Indonesia</p></Col>
                             </Row>
                         </div>
                     </section>
@@ -107,74 +135,94 @@ class Index  extends React.Component {
                         <Container fluid>
                             <Row>
                                 <Col md={8} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/LandscapePrimavera.png" width="100%" />
-                                        <p className="title">Landscape Primavera</p>
-                                        <p className="subTitle">Bumi Serpond Damai, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play1}`}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/LandscapePrimavera.png" width="100%" />
+                                            <p className="title">Landscape Primavera</p>
+                                            <p className="subTitle">Bumi Serpond Damai, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={4} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/Priskop.png" width="100%" />
-                                        <p className="title">Priskop</p>
-                                        <p className="subTitle">Jakarta, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play1}`} delay={.1}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/Priskop.png" width="100%" />
+                                            <p className="title" onClick={this.test}>Priskop</p>
+                                            <p className="subTitle">Jakarta, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={2} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/Sixty.png" width="100%" />
-                                        <p className="title">Sixty Two Coffee</p>
-                                        <p className="subTitle">Senopati, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play2}`} delay={.3}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/Sixty.png" width="100%" />
+                                            <p className="title">Sixty Two Coffee</p>
+                                            <p className="subTitle">Senopati, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={10} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/Blues.png" width="100%" />
-                                        <p className="title">Blues</p>
-                                        <p className="subTitle">Personal Project</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play2}`} delay={.1}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/Blues.png" width="100%" />
+                                            <p className="title">Blues</p>
+                                            <p className="subTitle">Personal Project</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={8} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/Sungay.png" width="100%" />
-                                        <p className="title">Sungay Teja</p>
-                                        <p className="subTitle">Kalimantan, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play3}`} delay={.3}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/Sungay.png" width="100%" />
+                                            <p className="title">Sungay Teja</p>
+                                            <p className="subTitle">Kalimantan, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={4} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/360.png" width="100%" />
-                                        <p className="title">360 Goods</p>
-                                        <p className="subTitle">Jakarta, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play3}`} delay={.3}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/360.png" width="100%" />
+                                            <p className="title">360 Goods</p>
+                                            <p className="subTitle">Jakarta, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={5} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/Villa.png" width="100%" />
-                                        <p className="title">Villa Cinere Mas</p>
-                                        <p className="subTitle">Cinere, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play4}`} delay={.3}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/Villa.png" width="100%" />
+                                            <p className="title">Villa Cinere Mas</p>
+                                            <p className="subTitle">Cinere, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={7} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/Eltra.png" width="100%" />
-                                        <p className="title">Eltra</p>
-                                        <p className="subTitle">Kemang, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play4}`} delay={.1}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/Eltra.png" width="100%" />
+                                            <p className="title">Eltra</p>
+                                            <p className="subTitle">Kemang, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={9} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/Maywild.png" width="100%" />
-                                        <p className="title">Maywild</p>
-                                        <p className="subTitle">Cinere, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play5}`} delay={.1}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/Maywild.png" width="100%" />
+                                            <p className="title">Maywild</p>
+                                            <p className="subTitle">Cinere, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                                 <Col md={3} className="mb-5">
-                                    <div className="box-img">
-                                        <img alt="lanscape" src="../static/images/LandscapePrimavera2.png" width="100%" />
-                                        <p className="title">Landscape Primavera</p>
-                                        <p className="subTitle">Bumi Serpong Damai, Indonesia</p>
-                                    </div>
+                                    <Tween from={{y:'140px',opacity:0}} to={{ y: '0',opacity:1}}  playState={`${play5}`} delay={.3}>
+                                        <div className="box-img">
+                                            <img alt="lanscape" src="../static/images/LandscapePrimavera2.png" width="100%" />
+                                            <p className="title">Landscape Primavera</p>
+                                            <p className="subTitle">Bumi Serpong Damai, Indonesia</p>
+                                        </div>
+                                    </Tween>
                                 </Col>
                             </Row>
                         </Container>
