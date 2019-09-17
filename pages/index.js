@@ -57,8 +57,6 @@ class Index  extends React.Component {
                 play5 : 'play',
             })
         }
-        console.log(valueScroll2);
-        
     }
 
     render(){
