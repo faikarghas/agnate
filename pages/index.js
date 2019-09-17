@@ -10,7 +10,7 @@ import '../sass/main.scss'
 class Index  extends React.Component {
 
     state = {
-        trans : ''
+        trans : 0
     }
 
     componentDidMount(){
@@ -51,7 +51,7 @@ class Index  extends React.Component {
                                             </h2>
                                         }
                                     >
-                                        <Tween from={{y:'250px'}} to={{ y: '0' }} />
+                                        <Tween from={{y:'50px',opacity:0}} to={{ y: '0',opacity:1}} delay={.5} />
                                     </Timeline>
                                 </Col>
                                 <Col xs={12} md={4} className="mid-img">
@@ -60,7 +60,7 @@ class Index  extends React.Component {
                                             <img src="../static/images/elchino.png" alt="elchino" width="100%" style={{WebkitTransform:`translate(0,${-trans}px)`,msTransform:`translate(0,${-trans}px)`,transform:`translate(0,${-trans}px)`}}/>
                                         }
                                     >
-                                        <Tween from={{y:'-250px'}} to={{ y: '0' }} />
+                                        <Tween from={{y:'-50px',opacity:0}} to={{ y: '0',opacity: 1 }} delay={.5}/>
                                     </Timeline>
                                 </Col>
                                 <Col xs={12} md={4} className="right-desc">
@@ -77,7 +77,7 @@ class Index  extends React.Component {
                                             </p>
                                             }
                                         >
-                                        <Tween from={{x:'250px'}} to={{ x: '0' }} />
+                                        <Tween from={{x:'50px'}} to={{ x: '0' }} delay={.5} />
                                     </Timeline>
                                 </Col>
                             </Row>
@@ -92,7 +92,7 @@ class Index  extends React.Component {
                                         }
                                         duration={2}
                                     >
-                                        <Tween from={{css:{width:'0'}}} to={{css:{width:'100%'}}} />
+                                        <Tween from={{css:{width:'0'}}} to={{css:{width:'100%'}}} delay={.7} />
                                     </Timeline>
                                 </Col>
                                 <Col xs={2} md={1} className="centerThis"><p>Indonesia</p></Col>
