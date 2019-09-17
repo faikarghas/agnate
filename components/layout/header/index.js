@@ -21,11 +21,11 @@ const index = (props) => {
                         <Col xs={5} md={5} className="logo-side"><Link href="/"><a>Ag-Na-Te</a></Link></Col>
                         <Col xs={7} md={7} className="right-side">
                             <ul style={{listStyle:'none'}}>
-                                <li><Link><a>About</a></Link></li>
+                                <li><Link href="/"><a>About</a></Link></li>
                                 <li><Link href="/graphicdesign"><a>Graphic Design</a></Link></li>
                                 <li><Link href="/architecture"><a>Architecture</a></Link></li>
-                                <li><Link><a>Construction</a></Link></li>
-                                <li><Link><a>Contact</a></Link></li>
+                                <li><Link href="/"><a>Construction</a></Link></li>
+                                <li><Link href="/"><a>Contact</a></Link></li>
                             </ul>
                         </Col>
                         <Col xs={7} md={7} className="menu-mobile">
@@ -52,11 +52,11 @@ const index = (props) => {
                             </Col>
                             <Col xs={12}>
                                 <ul style={{listStyle:'none'}}>
-                                    <li><Link><a>About</a></Link></li>
+                                    <li><Link href="/"><a>About</a></Link></li>
                                     <li><Link href="/graphicdesign"><a>Graphic Design</a></Link></li>
                                     <li><Link href="/architecture"><a>Architecture</a></Link></li>
-                                    <li><Link><a>Construction</a></Link></li>
-                                    <li><Link><a>Contact</a></Link></li>
+                                    <li><Link href="/"><a>Construction</a></Link></li>
+                                    <li><Link href="/"><a>Contact</a></Link></li>
                                 </ul>
                             </Col>
                         </Row>
