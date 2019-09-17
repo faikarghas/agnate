@@ -48,15 +48,17 @@ class Index  extends React.Component {
             this.setState({
                 play3 : 'play',
             })
-        } else if (valueScroll2 >= 24000 && valueScroll2 <= 29000){
+        } else if (valueScroll2 >= 19000 && valueScroll2 <= 23000){
             this.setState({
                 play4 : 'play',
             })
-        } else if (valueScroll2 >= 30000 && valueScroll2 <= 39000){
+        } else if (valueScroll2 >= 23500 && valueScroll2 <= 29000){
             this.setState({
                 play5 : 'play',
             })
         }
+        console.log(valueScroll2);
+        
     }
 
     render(){
