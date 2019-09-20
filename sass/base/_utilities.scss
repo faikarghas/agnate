@@ -1,3 +1,11 @@
 #nprogress .spinner {
     display: none;
 }
+
+#nprogress .bar {
+    background: white;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px white, 0 0 5px white;
+}

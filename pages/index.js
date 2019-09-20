@@ -65,7 +65,7 @@ class Index  extends React.Component {
             <React.Fragment>
                 <HeaderLayout height="100vh" color="#231f20">
                     <Link href="/project/[slug]" as="/project/elchino">
-                    <a style={{display:'block'}}>
+                    <a className="header-ct" style={{display:'block'}}>
                     <section className="section_header-home">
                         <Container fluid>
                             <Row>
@@ -84,7 +84,7 @@ class Index  extends React.Component {
                                 </Col>
                                 <Col xs={12} md={4} className="mid-img">
                                     <Timeline
-                                        target={ 
+                                        target={
                                             <img src="../static/images/elchino.png" alt="elchino" width="100%" style={{WebkitTransform:`translate(0,${-trans}px)`,msTransform:`translate(0,${-trans}px)`,transform:`translate(0,${-trans}px)`}}/>
                                         }
                                     >
