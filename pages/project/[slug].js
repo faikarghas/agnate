@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HeaderLayout from '../../components/layout'
 import {Container,Row,Col} from 'react-bootstrap'
+import Link from 'next/link'
 
 import '../../sass/main.scss'
 
@@ -33,7 +34,7 @@ export default class project extends Component {
                                     <ul>
                                         <li><p>Designer</p></li>
                                         <li><div className="bd"></div></li>
-                                        <li><p>Muhammad Adriel Reyhan</p></li>
+                                        <li><p>Orry Junior Marlock</p></li>
                                     </ul>
                                     <br/>
                                     <br/>
@@ -72,7 +73,7 @@ export default class project extends Component {
                             <Col xs={12} className="nav-project">
                                 <ul>
                                     <li><a>Next</a></li>
-                                    <li><a>Home</a></li>
+                                    <li><Link><a>Home</a></Link></li>
                                     <li><a>Architecture</a></li>
                                 </ul>
                             </Col>

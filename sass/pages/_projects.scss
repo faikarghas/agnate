@@ -70,12 +70,17 @@
                 margin-right: 4rem;
                 a{
                     cursor: pointer;
+                    text-decoration: underline;
+                    font-weight: bold;
                 }
             }
         }
     }
     .desc-2{
         margin-bottom: 7rem;
+        p{
+            text-decoration: underline;
+        }
         @include respond(phone){
             display: flex;
             justify-content: flex-end;
