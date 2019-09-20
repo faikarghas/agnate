@@ -73,7 +73,7 @@ export default class project extends Component {
                             <Col xs={12} className="nav-project">
                                 <ul>
                                     <li><a>Next</a></li>
-                                    <li><Link><a>Home</a></Link></li>
+                                    <li><Link href="/"><a>Home</a></Link></li>
                                     <li><a>Architecture</a></li>
                                 </ul>
                             </Col>
